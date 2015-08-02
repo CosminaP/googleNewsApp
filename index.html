@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="appNews">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title ng-bind="title + ' - Google News'"></title>
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <link href="css/appNews.css" rel="stylesheet" type="text/css"/>
+        <script src="js/angular.min.js" type="text/javascript"></script>    
+        <script src="js/appNews.js" type="text/javascript"></script>
+        <script src="js/angular.sanitize.js" type="text/javascript"></script>
+        <script src="js/angular.route.js" type="text/javascript"></script>
+        <script src="bootstrap/js/ui-bootstrap-tpls-0.13.1.min.js" type="text/javascript"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    </head>
+    <body>  
+        <div class="container" ng-view></div>
+    </body>
+</html>

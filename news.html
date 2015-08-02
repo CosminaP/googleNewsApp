@@ -1,0 +1,31 @@
+<div class="row main">
+    <div class="col-md-12 ">
+        <header></header>
+    </div>
+</div>    
+<div class="col-md-2" >
+    <div class="list-group" >
+        <a ng-href="#/topic/{{section.keyword}}"
+           ng-class="{'active': section.keyword === news.keyword, 'list-group-item': true}" 
+           ng-repeat="section in news.sections">
+            <h5 class="list-group-item-heading">{{section.title}}</h5>
+        </a>
+    </div>
+</div>
+<div class="col-md-5" ng-repeat="storyColumn in news.stories">
+    <div class="list-group">
+        <div class="list-group-item story" ng-repeat="story in storyColumn" id="story-container">
+            <a ng-href="{{story.unescapedUrl}}" target="_blank"><h4 class="list-group-item-heading" id="pull-top" ng-bind-html="story.title"></h4></a>
+            <a ng-href="{{story.unescapedUrl}}" target="_blank"><img class="pull-right thumb-img" ng-src="{{story.image.tbUrl}}" alt="{{story.title}}" ng-show="story.image"></a>
+            <p class="list-group-item-text blue" ng-bind-html="story.content" id="story-text"></p> 
+            <div class="small text-right" id="pull-text"><em>{{story.publishedDate| date}} - {{story.publisher}}</em></div>
+        </div>
+    </div>        
+</div>
+<div class="col-md-10 col-md-offset-2 text-center">
+    <pagination total-items="news.totalItems" 
+                items-per-page="8"
+                ng-model="news.currentPage"
+                ng-change="news.refresh()">
+    </pagination>
+</div>   
