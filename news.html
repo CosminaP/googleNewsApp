@@ -1,13 +1,8 @@
-<div class="row main">
-    <div class="col-md-12 ">
-        <header></header>
-    </div>
-</div>    
 <div class="col-md-2" >
     <div class="list-group" >
-        <a ng-href="#/topic/{{section.keyword}}"
+        <a ng-href="#/topic/{{section.keyword}}" 
            ng-class="{'active': section.keyword === news.keyword, 'list-group-item': true}" 
-           ng-repeat="section in news.sections">
+           ng-repeat="section in news.sections"> 
             <h5 class="list-group-item-heading">{{section.title}}</h5>
         </a>
     </div>
